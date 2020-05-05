@@ -23,12 +23,14 @@
     },
     "WebIngressLocation": {
       "type": "string",
+      "defaultValue": "46.140.172.60",
       "metadata": {
         "description": "Allow inbound HTTP traffic to the SAS Viya Environment from this CIDR block (IP address range). Must be a valid IP CIDR range of the form x.x.x.x/x."
       }
     },
     "AdminIngressLocation": {
       "type": "string",
+      "defaultValue": "46.140.172.60",
       "metadata": {
         "description": "Allow inbound SSH traffic to the Ansible Controller from this CIDR block (IP address range). Must be a valid IP CIDR range of the form x.x.x.x/x."
       }
@@ -37,13 +39,14 @@
       "type": "securestring",
       "minLength": 6,
       "maxLength": 255,
+      "defaultValue": "TDY3IqqdybWlE4f5jOS3",
       "metadata": {
         "description": "Password of the SAS Admin Users (sasboot, optionally sasadmin). Must have at least 6 and no more than 255 characters. Single quotes (') are not allowed."
       }
     },
     "SASUserPass": {
       "type": "securestring",
-      "defaultValue": "",
+      "defaultValue": "SAfp0AIfayLaV7VwYzC6",
       "metadata": {
         "description": "Password of the default SAS User (sasuser). If left empty, no default users are created. (WARNING: If not set, deployment will require additional setup steps before it is usable). Single quotes (') are not allowed."
       }
@@ -71,7 +74,7 @@
     },
     "Controller VM SKU": {
       "type": "string",
-      "defaultValue": "Standard_E8s_v3",
+      "defaultValue": "Standard_E16s_v3",
       "metadata": {
         "description": "This is the SKU for the Controller VM. The default SKU value represents the minimum recommended size for system stability in most SAS software license sets. The selected SKU must support premium disks."
       }
@@ -87,7 +90,7 @@
     },
     "CAS Worker VM SKU": {
       "type": "string",
-      "defaultValue": "Standard_E8s_v3",
+      "defaultValue": "Standard_E16s_v3",
       "metadata": {
         "description": "This is the SKU for the CAS worker VM. The default SKU value represents the minimum recommended size for system stability in most SAS software license sets. The selected SKU must support premium disks."
       }
@@ -101,7 +104,7 @@
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sas-viya/",
+      "defaultValue": "https://raw.githubusercontent.com/nosiam/sas-backup/master/sas-viya/",
       "metadata": {
         "description": "For a standard deployment, keep the default.  The https URL to the base of the deployment files in Microsoft Azure. If a SAS key is needed, please do not include the SAS key in the URL. Instead, add the part after and include the question mark to the _artifactsLocationSasToken variable. ex. https://(STORAGE_ACCOUNT).file.core.windows.net/(SHARE_NAME)/(SUBDIRECTORY_NAME)/"
       }
